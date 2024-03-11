@@ -1,0 +1,34 @@
+server:
+  port: 8085
+
+spring:
+  docker:
+    compose:
+      lifecycle-management: start_only
+
+  datasource:
+    url: jdbc:postgresql://LOCALHOST:5444/ingame365?currentSchema=ingame365
+    username: sumkin
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        default_schema: ingame365
+        format_sql: true
+        type: trace
+    show-sql: true
+
+  liquibase:
+    change-log: classpath:liquibase/changelog.yaml
+    enabled: true
+    default-schema: liquibase
+
+security:
+  jwt:
+    secret: cmZnaHRyaHJ0ZWZodHlqdHl0eWplcmdlZ3dEU0ZHQkdFR0hUSFJUSFJUSFRIR2RmZmc=
+    access: 3600000
+    refresh: 259200000
+springdoc:
+  override-with-generic-response: false

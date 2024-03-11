@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>6949362b-3c17-4b4e-a16f-4ef59d4e71fc</OriginalElement>
+  <nodes>
+    <node x="916.875" y="364.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_roles</node>
+    <node x="-166.0" y="-324.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.teams</node>
+    <node x="1145.48" y="364.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_tasks</node>
+    <node x="-166.0" y="862.0">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.liquibase.databasechangelog</node>
+    <node x="144.89499999999998" y="-285.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.training</node>
+    <node x="632.875" y="305.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.after_training</node>
+    <node x="348.875" y="52.0">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.before_training</node>
+    <node x="-120.125" y="344.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.training_teams</node>
+    <node x="129.875" y="364.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_teams</node>
+    <node x="173.0" y="862.0">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.liquibase.databasechangeloglock</node>
+    <node x="642.98" y="-383.0">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users</node>
+    <node x="1095.48" y="-324.5">6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.tasks</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.after_training" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.training" relationship="REFERENCES">
+      <point x="-66.0" y="-129.0" />
+      <point x="698.875" y="22.0" />
+      <point x="280.895" y="22.0" />
+      <point x="0.0" y="90.0" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.before_training" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users" relationship="REFERENCES">
+      <point x="66.0" y="-382.5" />
+      <point x="546.875" y="12.0" />
+      <point x="775.48" y="12.0" />
+      <point x="0.0" y="187.5" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_teams" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.teams" relationship="REFERENCES">
+      <point x="-49.75" y="-70.0" />
+      <point x="179.625" y="32.0" />
+      <point x="-38.5" y="32.0" />
+      <point x="0.0" y="129.0" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.training_teams" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.training" relationship="REFERENCES">
+      <point x="57.5" y="-90.0" />
+      <point x="52.375" y="22.0" />
+      <point x="280.895" y="22.0" />
+      <point x="0.0" y="90.0" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_teams" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users" relationship="REFERENCES">
+      <point x="49.75" y="-70.0" />
+      <point x="279.125" y="12.0" />
+      <point x="775.48" y="12.0" />
+      <point x="0.0" y="187.5" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_roles" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users" relationship="REFERENCES">
+      <point x="0.0" y="-70.0" />
+      <point x="1018.375" y="12.0" />
+      <point x="775.48" y="12.0" />
+      <point x="0.0" y="187.5" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_tasks" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users" relationship="REFERENCES">
+      <point x="-46.75" y="-70.0" />
+      <point x="1192.23" y="12.0" />
+      <point x="775.48" y="12.0" />
+      <point x="0.0" y="187.5" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.after_training" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users" relationship="REFERENCES">
+      <point x="66.0" y="-129.0" />
+      <point x="830.875" y="12.0" />
+      <point x="775.48" y="12.0" />
+      <point x="0.0" y="187.5" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.before_training" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.training" relationship="REFERENCES">
+      <point x="-66.0" y="-382.5" />
+      <point x="414.875" y="22.0" />
+      <point x="280.895" y="22.0" />
+      <point x="0.0" y="90.0" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.training_teams" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.teams" relationship="REFERENCES">
+      <point x="-57.5" y="-90.0" />
+      <point x="-62.625" y="32.0" />
+      <point x="-38.5" y="32.0" />
+      <point x="0.0" y="129.0" />
+    </edge>
+    <edge source="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.users_tasks" target="6949362b-3c17-4b4e-a16f-4ef59d4e71fc.TABLE:ingame365.ingame365.tasks" relationship="REFERENCES">
+      <point x="46.75" y="-70.0" />
+      <point x="1285.73" y="32.0" />
+      <point x="1243.98" y="32.0" />
+      <point x="0.0" y="129.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6241324079017618" showDependencies="false" x="623.5" y="553.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

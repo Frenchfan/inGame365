@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  postgres:
+    container_name: ingame365
+    image: 'postgres:16.0'
+    environment:
+      - 'POSTGRES_DB=ingame365'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=sumkin'
+    ports:
+      - '5444:5432'
+
+  javaback:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'javaback'
+    ports:
+      - '8085:8085'  # Expose the server port
+    depends_on:
+      - 'postgres'
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ingame365?currentSchema=ingame365
+      SPRING_DATASOURCE_USERNAME: sumkin
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_DATASOURCE_DRIVER-CLASS-NAME: org.postgresql.Driver
+      SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA: ingame365
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
+      SPRING_JPA_SHOW-SQL: "true"
+      SPRING_LIQUIBASE_CHANGE-LOG: classpath:liquibase/changelog.yaml
+      SPRING_LIQUIBASE_ENABLED: "true"
+      SPRING_LIQUIBASE_DEFAULT-SCHEMA: liquibase
+      SPRING_PRELIQUIBASE_ENABLED: "true"
+      SPRINGDOC_OVERRIDE-WITH-GENERIC-RESPONSE: "false"
+      SERVER_PORT: 8085

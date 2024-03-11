@@ -1,0 +1,47 @@
+@startuml
+
+!theme plain
+left to right direction
+skinparam linetype ortho
+
+class ApplicationConfig
+class AuthController
+class AuthServiceImpl
+class ControllerAdvice
+class CorsConfiguration
+class CustomSecurityExpression
+class DataSourceConfig
+class JwtProperties
+class JwtTokenProvider
+class JwtUserDetailsService
+class TaskController
+class TaskMapperImpl
+class TaskServiceImpl
+class TasklistApplication
+class TeamController
+class TeamMapperImpl
+class TeamServiceImpl
+class UserController
+class UserMapperImpl
+class UserServiceImpl
+
+TasklistApplication       -[#000082,plain]->  ApplicationConfig        
+TasklistApplication       -[#000082,plain]->  AuthController           
+TasklistApplication       -[#000082,plain]->  AuthServiceImpl          
+TasklistApplication       -[#000082,plain]->  ControllerAdvice         
+TasklistApplication       -[#000082,plain]->  CorsConfiguration        
+TasklistApplication       -[#000082,plain]->  CustomSecurityExpression 
+TasklistApplication       -[#000082,plain]->  DataSourceConfig         
+TasklistApplication       -[#000082,plain]->  JwtProperties            
+TasklistApplication       -[#000082,plain]->  JwtTokenProvider         
+TasklistApplication       -[#000082,plain]->  JwtUserDetailsService    
+TasklistApplication       -[#000082,plain]->  TaskController           
+TasklistApplication       -[#000082,plain]->  TaskMapperImpl           
+TasklistApplication       -[#000082,plain]->  TaskServiceImpl          
+TasklistApplication       -[#000082,plain]->  TeamController           
+TasklistApplication       -[#000082,plain]->  TeamMapperImpl           
+TasklistApplication       -[#000082,plain]->  TeamServiceImpl          
+TasklistApplication       -[#000082,plain]->  UserController           
+TasklistApplication       -[#000082,plain]->  UserMapperImpl           
+TasklistApplication       -[#000082,plain]->  UserServiceImpl          
+@enduml
